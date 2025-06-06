@@ -1,0 +1,724 @@
+        /* Custom animation for batik pattern to move like clouds */
+        @keyframes drift {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .batik-pattern-container {
+            position: absolute;
+            top: 120px;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .batik-pattern {
+            width: 50%;
+            height: 100%;
+            animation: drift 60s linear infinite;
+        }
+
+        /* Fix for potential overflow issues */
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Add background color when scrolled */
+        .navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ensure the illustration container is responsive */
+        .layanan-kami .illustration-container {
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 1023px) {
+            .layanan-kami .illustration-container {
+                margin-top: 2rem;
+                max-width: 200px;
+            }
+
+            .layanan-kami .illustration-container img {
+                max-height: 250px;
+            }
+
+            .layanan-kami .illustration-container .absolute {
+                transform: scale(0.6);
+            }
+        }
+
+        /* Ensure badges don't overflow on smaller screens */
+        .layanan-kami .absolute {
+            transition: transform 0.3s ease;
+        }
+
+        /* Style for icon containers in the Paket section */
+        .paket .icon-container {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        /* Hover effect for icon containers */
+        .paket .icon-container:hover {
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        /* Ensure consistent spacing between icon and text */
+        .paket .package-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .paket .icon-container {
+                width: 48px;
+                height: 48px;
+            }
+
+            .paket .icon-container svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .paket .package-header {
+                gap: 12px;
+            }
+        }
+
+        /* Ensure the section has enough padding to avoid background overlap */
+        .paket {
+            padding-top: 48px;
+        }
+
+        /* Adjust the background image position in the Paket section */
+        .paket .absolute {
+            background-size: contain;
+            background-position: center top;
+            top: 0;
+            height: 100%;
+        }
+
+        /* Card hover animation for Layanan Kami */
+        .layanan-kami .grid>div {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .layanan-kami .grid>div:hover {
+            transform: translateY(-8px) rotate(1deg);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Refined card animation for Paket section */
+        .paket .grid>div {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+            transform: perspective(1000px) rotateX(0deg);
+            border-radius: 16px;
+            overflow: hidden;
+            background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+            border: 1px solid #e5e7eb;
+        }
+
+        .paket .grid>div:hover {
+            transform: perspective(1000px) rotateX(3deg) translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Scroll animation for Paket cards */
+        [data-aos="fade-up"] .paket .grid>div {
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        [data-aos="fade-up"].aos-animate .paket .grid>div {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Text animation refinement for AOS */
+        [data-aos="fade-up"] h2,
+        [data-aos="fade-up"] p {
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        [data-aos="fade-up"].aos-animate h2 {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        [data-aos="fade-up"] h2 {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        [data-aos="fade-up"].aos-animate p {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        [data-aos="fade-up"] p {
+            transform: translateY(20px);
+            opacity: 0;
+            transition-delay: 0.2s;
+        }
+
+        /* Icon animation for service and package sections */
+        .layanan-kami .grid>div svg,
+        .paket .icon-container svg {
+            transition: transform 0.3s ease, fill 0.3s ease;
+        }
+
+        .layanan-kami .grid>div:hover svg,
+        .paket .icon-container:hover svg {
+            transform: scale(1.2);
+            fill: #ffffff;
+        }
+
+        /* Button pulse animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(2, 70, 115, 0.4);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(2, 70, 115, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(2, 70, 115, 0);
+            }
+        }
+
+        /* Default button animations */
+        .btn-primary,
+        .paket button {
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-primary:hover,
+        .paket button:hover {
+            transform: scale(1.1);
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Chat consultation button with default pulse */
+        .chat-consultation-btn {
+            animation: pulse 1.5s infinite;
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .chat-consultation-btn:hover {
+            transform: scale(1.1);
+            background-color: #e5e7eb;
+        }
+
+        /* Social media icon animation */
+        .social-media a svg {
+            transition: transform 0.3s ease, fill 0.3s ease;
+        }
+
+        .social-media a:hover svg {
+            transform: scale(1.2) rotate(10deg);
+            fill: #024673;
+        }
+
+        /* Ensure card content spacing */
+        .paket .grid>div .p-8 {
+            padding: 2rem;
+        }
+
+        .paket .grid>div h3 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+
+        .paket .grid>div .mb-6 {
+            margin-bottom: 1.5rem;
+        }
+
+        .paket .grid>div .mb-8 {
+            margin-bottom: 2rem;
+        }
+
+        .paket .grid>div ul {
+            margin-bottom: 0;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #024673, #0369a1);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .main-filter-btn.active {
+            background-color: #024673;
+            color: white;
+            border-color: #024673;
+        }
+
+        .main-filter-btn:not(.active) {
+            background-color: transparent;
+            color: #024673;
+            border-color: #024673;
+        }
+
+        .main-filter-btn:hover:not(.active) {
+            background-color: #024673;
+            color: white;
+        }
+
+        .main-filter-btn {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Subcategory Filters Animation */
+        #subcategory-filters {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #subcategory-filters.hidden {
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+        }
+
+        /* Project Card Animation */
+        .project-card {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .project-card.hidden {
+            opacity: 0;
+            transform: scale(0.95);
+            pointer-events: none;
+        }
+
+        .project-card.show {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        .wave {
+            animation: wave 6s ease-in-out infinite;
+            transform-origin: center;
+
+        }
+
+        .wave2 {
+            animation: wave2 8s ease-in-out infinite reverse;
+            transform-origin: center;
+        }
+
+        .wave3 {
+            animation: wave3 10s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        @keyframes wave {
+
+            0%,
+            100% {
+                d: path("M0,40 C150,80 350,0 500,40 C650,80 850,0 1000,40 C1150,80 1350,0 1440,40 L1440,100 L0,100 Z");
+            }
+
+            50% {
+                d: path("M0,20 C150,60 350,20 500,60 C650,20 850,60 1000,20 C1150,60 1350,20 1440,60 L1440,100 L0,100 Z");
+            }
+        }
+
+        @keyframes wave2 {
+
+            0%,
+            100% {
+                d: path("M0,60 C150,20 350,60 500,20 C650,60 850,20 1000,60 C1150,20 1350,60 1440,20 L1440,100 L0,100 Z");
+            }
+
+            50% {
+                d: path("M0,40 C150,0 350,40 500,0 C650,40 850,0 1000,40 C1150,0 1350,40 1440,0 L1440,100 L0,100 Z");
+            }
+        }
+
+        @keyframes wave3 {
+
+            0%,
+            100% {
+                d: path("M0,30 C150,70 350,30 500,70 C650,30 850,70 1000,30 C1150,70 1350,30 1440,70 L1440,100 L0,100 Z");
+            }
+
+            50% {
+                d: path("M0,50 C150,10 350,50 500,10 C650,50 850,10 1000,50 C1150,10 1350,50 1440,10 L1440,100 L0,100 Z");
+            }
+        }
+
+        .payment-icon {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-icon:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        .link-item:hover {
+            transform: translateX(4px);
+        }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+        
+        .modal-content h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2C3E50;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .modal-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .modal-content label {
+            font-size: 0.875rem;
+            color: #374151;
+            font-weight: 500;
+        }
+        
+        .modal-content input {
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 0.875rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .modal-content input:focus {
+            outline: none;
+            border-color: #0369a1;
+            box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.1);
+        }
+        
+        .modal-content button[type="submit"] {
+            background: linear-gradient(135deg, #024673 0%, #0369a1 100%);
+            color: white;
+            padding: 0.75rem;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .modal-content button[type="submit"]:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(2, 70, 115, 0.3);
+        }
+        
+        .modal-content button[type="submit"]:active {
+            transform: scale(0.95);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #e5e7eb;
+            border-radius: 50%;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .modal-close:hover {
+            background: #d1d5db;
+        }
+
+        /* Portfolio Modal */
+        #imageModal.active {
+            display: flex;
+        }
+
+        footer {
+            position: relative;
+            background-color: #2C3E50;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Wave Container */
+        .wave-container {
+            position: relative;
+            width: 100%;
+            height: 96px; /* Adjusted height for better wave visibility */
+            background: linear-gradient(to bottom right, #EFF6FF, #C7D2FE);
+            overflow: hidden;
+        }
+
+        /* Wave SVG Styling */
+        .wave, .wave2, .wave3 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            fill: #2C3E50;
+        }
+
+        .wave {
+            animation: wave 6s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        .wave2 {
+            animation: wave2 8s ease-in-out infinite reverse;
+            transform-origin: center;
+            opacity: 0.8;
+        }
+
+        .wave3 {
+            animation: wave3 10s ease-in-out infinite;
+            transform-origin: center;
+            opacity: 0.7;
+        }
+
+        /* Wave Animations */
+        @keyframes wave {
+            0%, 100% {
+                d: path("M0,40 C150,80 350,0 500,40 C650,80 850,0 1000,40 C1150,80 1350,0 1440,40 L1440,100 L0,100 Z");
+            }
+            50% {
+                d: path("M0,20 C150,60 350,20 500,60 C650,20 850,60 1000,20 C1150,60 1350,20 1440,60 L1440,100 L0,100 Z");
+            }
+        }
+
+        @keyframes wave2 {
+            0%, 100% {
+                d: path("M0,60 C150,20 350,60 500,20 C650,60 850,20 1000,60 C1150,20 1350,60 1440,20 L1440,100 L0,100 Z");
+            }
+            50% {
+                d: path("M0,40 C150,0 350,40 500,0 C650,40 850,0 1000,40 C1150,0 1350,40 1440,0 L1440,100 L0,100 Z");
+            }
+        }
+
+        @keyframes wave3 {
+            0%, 100% {
+                d: path("M0,30 C150,70 350,30 500,70 C650,30 850,70 1000,30 C1150,70 1350,30 1440,70 L1440,100 L0,100 Z");
+            }
+            50% {
+                d: path("M0,50 C150,10 350,50 500,10 C650,50 850,10 1000,50 C1150,10 1350,50 1440,10 L1440,100 L0,100 Z");
+            }
+        }
+
+        /* Footer Content */
+        .footer-content {
+            position: relative;
+            z-index: 10;
+            padding: 24px 16px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 1024px) {
+            .footer-content {
+                padding: 24px 32px;
+            }
+        }
+
+        /* Grid Layout */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 48px;
+            }
+        }
+
+        /* Logo and Description Section */
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .logo-section {
+                align-items: flex-start;
+                text-align: left;
+            }
+        }
+
+        .logo-section img {
+            height: 64px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .logo-section img {
+                margin: 0;
+            }
+        }
+
+        .logo-section p {
+            font-size: 14px;
+            color: #D1D5DB;
+        }
+
+        /* Footer Links */
+        .footer-links h4, .footer-services h4, .footer-contact h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-links ul, .footer-services ul, .footer-contact ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 14px;
+            color: #D1D5DB;
+        }
+
+        .footer-links ul li a, .footer-services ul li a {
+            color: #D1D5DB;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links ul li a:hover, .footer-services ul li a:hover {
+            color: white;
+        }
+
+        /* Contact Section */
+        .footer-contact ul li i {
+            margin-right: 8px;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .social-icons a {
+            color: #D1D5DB;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: white;
+        }
+
+        /* Copyright */
+        .copyright {
+            margin-top: 32px;
+            text-align: center;
+            font-size: 12px;
+            color: #9CA3AF;
+        }
+
+        /* Filter Button Active State */
+        .main-filter-btn.active,
+        .filter-btn.active {
+            background-color: #024673;
+            color: white;
+        }
+
+        /* Hide Subcategory Filters for Aplikasi Initially */
+        #subcategory-filters.aplikasi {
+            display: none;
+        }
