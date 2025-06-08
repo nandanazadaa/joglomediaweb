@@ -1,1302 +1,1126 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joglo Media Web Development</title>
-    <link rel="icon" href="/img/logo-putih2.png" type="image/png" width="100">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOS Library for Scroll Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="./css/home.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   <style>
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Joglo Media Web Development</title>
+        <link rel="icon" href="images/logo-putih2.png" type="image/png" width="100">
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- AOS Library for Scroll Animations -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="css/home.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    </style>
-</head>
-<body class="font-inter bg-gradient-to-b from-[#c9d6e3] to-[#e8ebf2] text-[#1a1a1a]">
-    <div class="relative min-h-screen flex flex-col w-full">
-        <!-- Header Section -->
-        <header class="navbar fixed top-0 w-full z-[1000] flex items-center py-4 h-[120px] backdrop-blur-sm px-8"
-            data-aos="fade-down" data-aos-duration="1000">
-            <div class="flex items-center w-full max-w-7xl mx-auto">
-                <div class="logo flex items-start">
-                    <img src="/img/logo-biru.png" alt="Joglo Media" class="h-[100px]" />
-                </div>
-                <div class="flex-1 flex justify-center">
-                    <nav class="nav-links flex items-center gap-10">
-                        <a href="#"
-                            class="text-[#024673] font-medium text-sm hover:text-[#1e3a8a] transition-colors active:font-bold">Beranda</a>
-                        <a href="#"
-                            class="text-[#024673] font-medium text-sm hover:text-[#1e3a8a] transition-colors">Tentang
-                            Kami</a>
-                        <a href="#"
-                            class="text-[#024673] font-medium text-sm hover:text-[#1e3a8a] transition-colors">Paket</a>
-                        <a href="#"
-                            class="text-[#024673] font-medium text-sm hover:text-[#1e3a8a] transition-colors">Cara
-                            Pemesanan</a>
-                        <a href="#"
-                            class="text-[#024673] font-medium text-sm hover:text-[#1e3a8a] transition-colors">Portofolio</a>
-                        <a href="#"
-                            class="text-[#024673] font-medium text-sm hover:text-[#1e3a8a] transition-colors">Testimoni</a>
-                        <button
-                            class="btn-primary border-none py-3 px-5 rounded-full font-normal text-sm cursor-pointer bg-[#024673] text-white hover:bg-[#1e3a8a] hover:scale-105 transition-all duration-200">Pesan
-                            Sekarang</button>
-                    </nav>
-                </div>
-            </div>
-        </header>
 
-        <!-- Hero Section -->
-        <main
-            class="hero flex flex-col items-center pt-[150px] pb-10 px-8 lg:px-16 min-h-[calc(100vh-120px)] relative overflow-hidden w-full">
-            <div class="flex flex-col lg:flex-row items-center justify-center max-w-7xl w-full gap-8">
-                <div class="hero-text max-w-[50%] text-base text-center lg:text-left" data-aos="fade-right"
-                    data-aos-duration="1000">
-                    <h1 class="text-[50px] text-[#0066CC] font-black mb-4 leading-tight">Bingung Mulai<br>Digitalisasi
-                        Bisnis?</h1>
-                    <p class="text-base mb-5 text-[#374151]">Joglo Media Web Development hadir untuk mendukung UMKM,
-                        kreator, dan komunitas tampil profesional di dunia digital. Kami menyediakan layanan pembuatan
-                        website yang responsif, terjangkau, dan sesuai karakter brand Anda.</p>
-                    <div class="cta-buttons flex gap-4 justify-center lg:justify-start">
-                        <button id="openConsultationModal"
-                            class="btn-secondary border-none py-3 px-5 rounded-full font-normal text-sm cursor-pointer bg-[#d1d5db] text-[#111827] hover:bg-[#e5e7eb] hover:scale-105 transition-all duration-200">Konsultasikan
-                            Sekarang</button>
-                        <button
-                            class="btn-primary border-none py-3 px-5 rounded-full font-normal text-sm cursor-pointer bg-[#024673] text-white hover:bg-[#1e3a8a] hover:scale-105 transition-all duration-200">Pesan
-                            Sekarang</button>
+    </head>
+    <body class="font-inter bg-gradient-to-b from-[#c9d6e3] to-[#e8ebf2] text-[#1a1a1a]">
+        <div class="relative min-h-screen flex flex-col w-full">
+            <!-- Header Section -->
+            <header class="navbar fixed top-0 w-full z-[1000] flex items-center py-4 h-[120px] backdrop-blur-sm px-8"
+                data-aos="fade-down" data-aos-duration="1000">
+                <div class="flex items-center w-full max-w-7xl mx-auto">
+                    <div class="logo flex items-start">
+                        <img src="images/logo-biru.png" alt="Joglo Media" class="h-[100px]" />
+                    </div>
+                    <div class="flex-1 flex justify-center">
+                        <nav class="nav-links flex items-center gap-10">
+                            <a href="#"
+                                class="text-[#024673] font-medium text-sm hover:text-[#1e3a8a] transition-colors active:font-bold">Beranda</a>
+                            <a href="#"
+                                class="text-[#024673] font-medium text-sm hover:text-[#1e3a8a] transition-colors">Tentang
+                                Kami</a>
+                            <a href="#"
+                                class="text-[#024673] font-medium text-sm hover:text-[#1e3a8a] transition-colors">Paket</a>
+                            <a href="#"
+                                class="text-[#024673] font-medium text-sm hover:text-[#1e3a8a] transition-colors">Cara
+                                Pemesanan</a>
+                            <a href="#"
+                                class="text-[#024673] font-medium text-sm hover:text-[#1e3a8a] transition-colors">Portofolio</a>
+                            <a href="#"
+                                class="text-[#024673] font-medium text-sm hover:text-[#1e3a8a] transition-colors">Testimoni</a>
+                            <button
+                                class="btn-primary border-none py-3 px-5 rounded-full font-normal text-sm cursor-pointer bg-[#024673] text-white hover:bg-[#1e3a8a] hover:scale-105 transition-all duration-200">Pesan
+                                Sekarang</button>
+                        </nav>
                     </div>
                 </div>
-                <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
-                    <img src="/img/banner-1.png" alt="Ilustrasi" class="w-[300px] h-[450px]" />
-                </div>
-            </div>
-            <div class="batik-pattern-container">
-                <img class="batik-pattern" src="/img/batik.png" alt="Motif Batik" />
-                <img class="batik-pattern" src="/img/batik.png" alt="Motif Batik" />
-            </div>
-        </main>
+            </header>
 
-        <!-- Layanan Kami Section -->
-        <section
-            class="layanan-kami py-16 px-8 lg:px-16 bg-gradient-to-b from-[#f3f4f6] to-[#e8ebf2] relative w-full overflow-hidden">
-            <div class="max-w-7xl mx-auto text-center mb-12" data-aos="fade-up" data-aos-duration="800">
-                <div class="flex justify-center items-center gap-4">
-                    <div class="h-px bg-[#334155] w-36"></div>
-                    <h2 class="text-[36px] text-[#2C3E50] font-black">LAYANAN KAMI</h2>
-                    <div class="h-px bg-[#334155] w-36"></div>
-                </div>
-            </div>
 
-            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 relative">
-                <!-- Service Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 flex-1 relative">
-                    <!-- Background pattern -->
-                    <div class="absolute inset-0 z-0 opacity-10">
-                        <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <pattern id="batikPattern" patternUnits="userSpaceOnUse" width="25" height="25">
-                                <path d="M0,0 L25,25 M25,0 L0,25" stroke="#024673" stroke-width="0.5" />
-                            </pattern>
-                            <rect width="100%" height="100%" fill="url(#batikPattern)" />
-                        </svg>
+            <!-- Hero Section -->
+            <main
+                class="hero flex flex-col items-center pt-[150px] pb-10 px-8 lg:px-16 min-h-[calc(100vh-120px)] relative overflow-hidden w-full">
+                <div class="flex flex-col lg:flex-row items-center justify-center max-w-7xl w-full gap-8">
+                    <div class="hero-text max-w-[50%] text-base text-center lg:text-left" data-aos="fade-right"
+                        data-aos-duration="1000">
+                        <h1 class="text-[50px] text-[#0066CC] font-black mb-4 leading-tight">Bingung Mulai<br>Digitalisasi
+                            Bisnis?</h1>
+                        <p class="text-base mb-5 text-[#374151]">Joglo Media Web Development hadir untuk mendukung UMKM,
+                            kreator, dan komunitas tampil profesional di dunia digital. Kami menyediakan layanan pembuatan
+                            website yang responsif, terjangkau, dan sesuai karakter brand Anda.</p>
+                        <div class="cta-buttons flex gap-4 justify-center lg:justify-start">
+                            <button id="openConsultationModal"
+                                class="btn-secondary border-none py-3 px-5 rounded-full font-normal text-sm cursor-pointer bg-[#d1d5db] text-[#111827] hover:bg-[#e5e7eb] hover:scale-105 transition-all duration-200">Konsultasikan
+                                Sekarang</button>
+                            <button
+                                class="btn-primary border-none py-3 px-5 rounded-full font-normal text-sm cursor-pointer bg-[#024673] text-white hover:bg-[#1e3a8a] hover:scale-105 transition-all duration-200">Pesan
+                                Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+                        <img src="images/banner-1.png" alt="Ilustrasi" class="w-[300px] h-[450px]" />
+                    </div>
+                </div>
+                <div class="batik-pattern-container">
+                    <img class="batik-pattern" src="images/batik.png" alt="Motif Batik" />
+                    <img class="batik-pattern" src="images/batik.png" alt="Motif Batik" />
+                </div>
+            </main>
+
+            <!-- Layanan Kami Section -->
+            <section
+                class="layanan-kami py-16 px-8 lg:px-16 bg-gradient-to-b from-[#f3f4f6] to-[#e8ebf2] relative w-full overflow-hidden">
+                <div class="max-w-7xl mx-auto text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                    <div class="flex justify-center items-center gap-4">
+                        <div class="h-px bg-[#334155] w-36"></div>
+                        <h2 class="text-[36px] text-[#2C3E50] font-black">LAYANAN KAMI</h2>
+                        <div class="h-px bg-[#334155] w-36"></div>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 relative">
+                    <!-- Service Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 flex-1 relative">
+                        <!-- Background pattern -->
+                        <div class="absolute inset-0 z-0 opacity-10">
+                            <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <pattern id="batikPattern" patternUnits="userSpaceOnUse" width="25" height="25">
+                                    <path d="M0,0 L25,25 M25,0 L0,25" stroke="#024673" stroke-width="0.5" />
+                                </pattern>
+                                <rect width="100%" height="100%" fill="url(#batikPattern)" />
+                            </svg>
+                        </div>
+
+                        <!-- Layanan 1 -->
+                        <div class="bg-[#0066CC] text-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 z-10"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <div class="flex items-start justify-between mb-4">
+                                <h3 class="text-xl font-bold">Desain Responsif & Mobile Friendly</h3>
+                                <div class="bg-white p-2 rounded-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="#0369a1">
+                                        <path
+                                            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-relaxed">Website kamu akan tampil maksimal di semua
+                                perangkat—smartphone, tablet, maupun desktop.</p>
+                        </div>
+
+                        <!-- Layanan 2 -->
+                        <div class="bg-[#0066CC] text-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 z-10"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <div class="flex items-start justify-between mb-4">
+                                <h3 class="text-xl font-bold">Harga Terjangkau, Paket Fleksibel</h3>
+                                <div class="bg-white p-2 rounded-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="#0369a1">
+                                        <path
+                                            d="M21 18v1c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-relaxed">Mulai dari paket biasa sampai custom website sesuai
+                                kebutuhan. Kami hadir sebagai solusi ekonomis untuk UMKM dan usaha kecil.</p>
+                        </div>
+
+                        <!-- Layanan 3 -->
+                        <div class="bg-[#0066CC] text-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 z-10"
+                            data-aos="fade-up" data-aos-delay="300">
+                            <div class="flex items-start justify-between mb-4">
+                                <h3 class="text-xl font-bold">Integrasi WhatsApp & Media Sosial</h3>
+                                <div class="bg-white p-2 rounded-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="#0369a1">
+                                        <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-relaxed">Permudah pelanggan terhubung langsung denganmu. Bisa chat
+                                langsung via WA, Instagram, atau platform lainnya.</p>
+                        </div>
+
+                        <!-- Layanan 4 -->
+                        <div class="bg-[#0066CC] text-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 z-10"
+                            data-aos="fade-up" data-aos-delay="400">
+                            <div class="flex items-start justify-between mb-4">
+                                <h3 class="text-xl font-bold">Full Support 24 Jam</h3>
+                                <div class="bg-white p-2 rounded-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="#0369a1">
+                                        <path
+                                            d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-relaxed">Tim kami siap bantu kapan pun kamu butuh. Baik kendala
+                                teknis, update konten, maupun konsultasi fitur tambahan.</p>
+                        </div>
+
+                        <!-- Layanan 5 -->
+                        <div class="bg-[#0066CC] text-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 z-10"
+                            data-aos="fade-up" data-aos-delay="500">
+                            <div class="flex items-start justify-between mb-4">
+                                <h3 class="text-xl font-bold">Garansi Maintenance 1 Bulan</h3>
+                                <div class="bg-white p-2 rounded-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="#0369a1">
+                                        <path
+                                            d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V9h14v10zm0-12H5V5h14v2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-relaxed">Kami tidak hanya membuat website, tapi juga memastikan
+                                website kamu selalu optimal. Gratis perbaikan dan pemeliharaan teknis selama 1 tahun penuh
+                                tanpa biaya tambahan.</p>
+                        </div>
                     </div>
 
-                    <!-- Layanan 1 -->
-                    <div class="bg-[#0066CC] text-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 z-10"
-                        data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-start justify-between mb-4">
-                            <h3 class="text-xl font-bold">Desain Responsif & Mobile Friendly</h3>
-                            <div class="bg-white p-2 rounded-md">
+                    <!-- Illustration -->
+                    <div class="lg:w-1/3 flex justify-center lg:justify-end items-center relative" data-aos="fade-left"
+                        data-aos-duration="1000">
+                        <div class="relative w-full max-w-[500px] lg:max-w-[500px]">
+                            <!-- Background shape for better integration -->
+                            <div class="absolute inset-0 bg-[#0369a1]/10 rounded-full transform scale-150 -z-10"></div>
+                            <img src="images/layanan-image.png" alt="Ilustrasi Karakter"
+                                class="w-full h-auto max-h-[500px] object-contain" />
+                            <!-- Badge dollar -->
+                            <div
+                                class="absolute top-[8%] right-[4%] bg-yellow-400 rounded-full p-2 lg:p-3 shadow-lg transform scale-75 lg:scale-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="#0369a1">
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <!-- Badge code -->
+                            <div
+                                class="absolute top-[35%] left-[4%] bg-blue-500 text-white rounded-full p-2 lg:p-3 shadow-lg transform scale-75 lg:scale-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <!-- Badge support -->
+                            <div
+                                class="absolute bottom-[15%] right-[4%] bg-orange-500 text-white rounded-full p-2 lg:p-3 shadow-lg transform scale-75 lg:scale-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
                                     <path
-                                        d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <p class="text-sm leading-relaxed">Website kamu akan tampil maksimal di semua
-                            perangkat—smartphone, tablet, maupun desktop.</p>
-                    </div>
-
-                    <!-- Layanan 2 -->
-                    <div class="bg-[#0066CC] text-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 z-10"
-                        data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex items-start justify-between mb-4">
-                            <h3 class="text-xl font-bold">Harga Terjangkau, Paket Fleksibel</h3>
-                            <div class="bg-white p-2 rounded-md">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="#0369a1">
+                                        d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z">
+                                    </path>
+                                    <path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path>
                                     <path
-                                        d="M21 18v1c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                                        d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z">
+                                    </path>
+                                    <path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"></path>
+                                    <path
+                                        d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z">
+                                    </path>
+                                    <path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"></path>
+                                    <path
+                                        d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z">
+                                    </path>
+                                    <path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"></path>
                                 </svg>
                             </div>
                         </div>
-                        <p class="text-sm leading-relaxed">Mulai dari paket biasa sampai custom website sesuai
-                            kebutuhan. Kami hadir sebagai solusi ekonomis untuk UMKM dan usaha kecil.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Paket Section -->
+            <section class="paket py-16 px-8 lg:px-16 bg-white relative w-full">
+                <div class="max-w-7xl mx-auto">
+                    <!-- Section Title -->
+                    <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                        <h2 class="text-[36px] text-[#2C3E50] font-black mb-4">Paket Pembuatan Website</h2>
+                        <p class="text-lg text-[#374151] max-w-2xl mx-auto">Pilih paket yang sesuai dengan kebutuhan bisnis
+                            Anda. Semua paket sudah termasuk hosting dan domain.</p>
                     </div>
 
-                    <!-- Layanan 3 -->
-                    <div class="bg-[#0066CC] text-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 z-10"
-                        data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex items-start justify-between mb-4">
-                            <h3 class="text-xl font-bold">Integrasi WhatsApp & Media Sosial</h3>
-                            <div class="bg-white p-2 rounded-md">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="#0369a1">
-                                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
-                                </svg>
+                    <!-- Background Image -->
+                    <div class="absolute inset-0 z-0"
+                        style="background-image: url('images/background-paket.png'); background-position: center top; background-size: contain; background-repeat: no-repeat; opacity: 0.6;">
+                    </div>
+
+                    <!-- Pricing Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+                        <!-- Paket Company Profile -->
+                        <div class="flex flex-col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="p-8 bg-gradient-to-b from-white to-gray-50 flex flex-col flex-grow">
+                                <!-- Package Header -->
+                                <div class="package-header">
+                                    <div class="icon-container bg-gradient-to-r from-purple-500 to-purple-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="white">
+                                            <path
+                                                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM8 18H4V8h4v10zm6 0h-4V8h4v10zm6 0h-4V8h4v10z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-black text-[#2C3E50]">Paket Company Profile</h3>
+                                        <p class="text-sm text-gray-500">Cocok untuk UMKM dan bisnis kecil</p>
+                                    </div>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="mb-6">
+                                    <div class="flex items-baseline">
+                                        <span class="text-4xl font-black text-[#024673]">Rp 1.000.000</span>
+                                        <span class="text-sm text-gray-500 ml-2">/Tahun</span>
+                                    </div>
+                                    <p class="text-xs text-gray-400 mt-1">Termasuk Hosting 1 Tahun</p>
+                                </div>
+
+                                <!-- Features -->
+                                <div class="mb-8 flex-grow">
+                                    <h4 class="font-semibold text-[#2C3E50] mb-4 text-base">Fitur Paket:</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Desain profesional & responsif</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>1-5 menu</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Gratis domain & hosting 1 tahun</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Admin panel sederhana</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Fitur Chat menuju WhatsApp</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>SEO basic</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>1 Banner Slider</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>3 Hari Pengerjaan</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- CTA Button -->
+                                <button
+                                    class="w-full bg-[#2C3E50] text-white py-3 px-6 rounded-full font-semibold hover:bg-[#2C3E50] transition-colors duration-200 transform hover:scale-105">Beli
+                                    Paket</button>
                             </div>
                         </div>
-                        <p class="text-sm leading-relaxed">Permudah pelanggan terhubung langsung denganmu. Bisa chat
-                            langsung via WA, Instagram, atau platform lainnya.</p>
+
+                        <!-- Paket Instansi/Sekolah -->
+                        <div class="flex flex-col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <div
+                                class="p-8 text-white flex flex-col flex-grow bg-gradient-to-b from-[#0066CC] to-[#2C3E50]">
+                                <!-- Package Header -->
+                                <div class="package-header">
+                                    <div class="icon-container bg-white/20">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="white">
+                                            <path
+                                                d="M21 8v9.5l-3-2.5v-3.2l-4.5 3.7-4.5-3.7v3.2l-3 2.5V8l7.5-6 7.5 6zm-9 9l3-2.5v-3.2l-3 2.5-3-2.5v3.2l3 2.5z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold">Paket Instansi / Sekolah</h3>
+                                        <p class="text-sm text-white/80">Direkomendasikan untuk instansi pemerintah,
+                                            yayasan dan organisasi pendidikan</p>
+                                    </div>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="mb-6">
+                                    <div class="flex items-baseline">
+                                        <span class="text-4xl font-black">Rp 3.000.000</span>
+                                        <span class="text-sm text-white/80 ml-2">/Tahun</span>
+                                    </div>
+                                    <p class="text-xs text-white/60 mt-1">Termasuk Hosting 1 Tahun</p>
+                                </div>
+
+                                <!-- Features -->
+                                <div class="mb-8 flex-grow">
+                                    <h4 class="font-semibold mb-4 text-base">Fitur Paket:</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Dashboard modern & informatif</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Fitur posting berkesinambungan</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Struktur organisasi</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Gratis domain & hosting 1 tahun</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Fitur Chat menuju WhatsApp</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Admin panel user friendly</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Gratis 1 Logo</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>3 Banner Slider</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>5 Hari Pengerjaan</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- CTA Button -->
+                                <button
+                                    class="w-full bg-white text-[#024673] py-3 px-6 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 transform hover:scale-105">Beli
+                                    Paket</button>
+                            </div>
+                        </div>
+
+                        <!-- Paket Custom Website -->
+                        <div class="flex flex-col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                            <div class="p-8 bg-gradient-to-b from-white to-gray-50 flex flex-col flex-grow">
+                                <!-- Package Header -->
+                                <div class="package-header">
+                                    <div class="icon-container bg-gradient-to-r from-blue-500 to-blue-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="white">
+                                            <path
+                                                d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65c-.03-.24-.24-.42-.49-.42h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.22-.08-.49 0-.61.22l-2 3.46c-.12.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-[#2C3E50]">Paket Custom Website</h3>
+                                        <p class="text-sm text-gray-500">Solusi terlengkap untuk kebutuhan spesifik bisnis
+                                            atau pribadi Anda</p>
+                                    </div>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="mb-6">
+                                    <div class="flex items-baseline">
+                                        <span class="text-4xl font-black text-[#024673]">Rp 5.000.000</span>
+                                        <span class="text-sm text-gray-500 ml-2">/Tahun</span>
+                                    </div>
+                                    <p class="text-xs text-gray-400 mt-1">Termasuk Hosting 1 Tahun</p>
+                                </div>
+
+                                <!-- Features -->
+                                <div class="mb-8 flex-grow">
+                                    <h4 class="font-semibold text-[#2C3E50] mb-4 text-base">Fitur Paket:</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Desain sesuai permintaan</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Fitur dan modul kustom</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Gratis domain & hosting 1 tahun</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Integrasi WhatsApp, Maps, dan form kontak</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Fitur Chat menuju WhatsApp</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Admin panel advanced</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>Gratis 1 Logo</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>5 Banner Slider</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>7 Hari Pengerjaan</span>
+                                        </li>
+                                        <li class="flex items-center text-sm">
+                                            <div
+                                                class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
+                                                    <path d="M10 3L4.5 8.5L2 6" />
+                                                </svg>
+                                            </div>
+                                            <span>3 kali revisi desain</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- CTA Button -->
+                                <button
+                                    class="w-full bg-[#2C3E50] text-white py-3 px-6 rounded-full font-semibold hover:bg-[#0369a1] transition-colors duration-200 transform hover:scale-105">Beli
+                                    Paket</button>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Layanan 4 -->
-                    <div class="bg-[#0066CC] text-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 z-10"
-                        data-aos="fade-up" data-aos-delay="400">
-                        <div class="flex items-start justify-between mb-4">
-                            <h3 class="text-xl font-bold">Full Support 24 Jam</h3>
-                            <div class="bg-white p-2 rounded-md">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="#0369a1">
+                    <!-- Bottom CTA -->
+                    <div class="text-center mt-12" data-aos="fade-up" data-aos-duration="800">
+                        <div class="bg-[#0066CC] rounded-2xl p-8 text-white shadow-lg">
+                            <h3 class="text-2xl font-bold mb-4">LAYANAN KONSULTASI MULAI JAM 08:00 - 21:00</h3>
+                            <p class="text-lg mb-6 text-white/90">Butuh konsultasi lebih lanjut? Tim kami siap membantu
+                                Anda memilih paket yang tepat!</p>
+                            <button id="openConsultationModalBottom"
+                                class="chat-consultation-btn bg-white text-[#024673] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center gap-2 transform hover:scale-105">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" />
                                 </svg>
-                            </div>
-                        </div>
-                        <p class="text-sm leading-relaxed">Tim kami siap bantu kapan pun kamu butuh. Baik kendala
-                            teknis, update konten, maupun konsultasi fitur tambahan.</p>
-                    </div>
-
-                    <!-- Layanan 5 -->
-                    <div class="bg-[#0066CC] text-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 z-10"
-                        data-aos="fade-up" data-aos-delay="500">
-                        <div class="flex items-start justify-between mb-4">
-                            <h3 class="text-xl font-bold">Garansi Maintenance 1 Bulan</h3>
-                            <div class="bg-white p-2 rounded-md">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="#0369a1">
-                                    <path
-                                        d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V9h14v10zm0-12H5V5h14v2z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <p class="text-sm leading-relaxed">Kami tidak hanya membuat website, tapi juga memastikan
-                            website kamu selalu optimal. Gratis perbaikan dan pemeliharaan teknis selama 1 tahun penuh
-                            tanpa biaya tambahan.</p>
-                    </div>
-                </div>
-
-                <!-- Illustration -->
-                <div class="lg:w-1/3 flex justify-center lg:justify-end items-center relative" data-aos="fade-left"
-                    data-aos-duration="1000">
-                    <div class="relative w-full max-w-[500px] lg:max-w-[500px]">
-                        <!-- Background shape for better integration -->
-                        <div class="absolute inset-0 bg-[#0369a1]/10 rounded-full transform scale-150 -z-10"></div>
-                        <img src="/img/layanan-image.png" alt="Ilustrasi Karakter"
-                            class="w-full h-auto max-h-[500px] object-contain" />
-                        <!-- Badge dollar -->
-                        <div
-                            class="absolute top-[8%] right-[4%] bg-yellow-400 rounded-full p-2 lg:p-3 shadow-lg transform scale-75 lg:scale-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="12" y1="1" x2="12" y2="23"></line>
-                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                            </svg>
-                        </div>
-                        <!-- Badge code -->
-                        <div
-                            class="absolute top-[35%] left-[4%] bg-blue-500 text-white rounded-full p-2 lg:p-3 shadow-lg transform scale-75 lg:scale-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="16 18 22 12 16 6"></polyline>
-                                <polyline points="8 6 2 12 8 18"></polyline>
-                            </svg>
-                        </div>
-                        <!-- Badge support -->
-                        <div
-                            class="absolute bottom-[15%] right-[4%] bg-orange-500 text-white rounded-full p-2 lg:p-3 shadow-lg transform scale-75 lg:scale-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z">
-                                </path>
-                                <path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path>
-                                <path
-                                    d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z">
-                                </path>
-                                <path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"></path>
-                                <path
-                                    d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z">
-                                </path>
-                                <path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"></path>
-                                <path
-                                    d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z">
-                                </path>
-                                <path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"></path>
-                            </svg>
+                                Chat Konsultasi Secara Langsung
+                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Paket Section -->
-        <section class="paket py-16 px-8 lg:px-16 bg-white relative w-full">
-            <div class="max-w-7xl mx-auto">
-                <!-- Section Title -->
-                <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
-                    <h2 class="text-[36px] text-[#2C3E50] font-black mb-4">Paket Pembuatan Website</h2>
-                    <p class="text-lg text-[#374151] max-w-2xl mx-auto">Pilih paket yang sesuai dengan kebutuhan bisnis
-                        Anda. Semua paket sudah termasuk hosting dan domain.</p>
+    <!-- Team Section -->
+            <section
+                class="tim py-16 px-8 lg:px-16 bg-gradient-to-b from-[#f3f4f6] to-[#e8ebf2] relative w-full overflow-hidden">
+                <div class="max-w-7xl mx-auto text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                    <div class="flex justify-center items-center gap-4">
+                        <div class="h-px bg-[#334155] w-36"></div>
+                        <h2 class="text-[36px] text-[#2C3E50] font-black">TIM KAMI</h2>
+                        <div class="h-px bg-[#334155] w-36"></div>
+                    </div>
+                    <p class="text-lg text-[#374151] max-w-2xl mx-auto mt-4">
+                        Temui tim profesional kami yang berdedikasi untuk membantu bisnis Anda go digital.
+                    </p>
                 </div>
 
-                <!-- Background Image -->
-                <div class="absolute inset-0 z-0"
-                    style="background-image: url('/img/background-paket.png'); background-position: center top; background-size: contain; background-repeat: no-repeat; opacity: 0.6;">
+                <!-- Background pattern -->
+                <div class="absolute inset-0 z-0 opacity-10">
+                    <svg width="100%" height="100%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                        <pattern id="parangPattern" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="rotate(45)">
+                            <path d="M0 20 L10 0 L20 20 L30 0 L40 20" stroke="#024673" stroke-width="1.5" fill="none" />
+                            <path d="M0 30 L10 10 L20 30 L30 10 L40 30" stroke="#024673" stroke-width="1.5" fill="none" />
+                            <circle cx="10" cy="10" r="2" fill="#024673" />
+                            <circle cx="30" cy="10" r="2" fill="#024673" />
+                            <circle cx="10" cy="30" r="2" fill="#024673" />
+                            <circle cx="30" cy="30" r="2" fill="#024673" />
+                        </pattern>
+                        <rect width="100%" height="100%" fill="url(#parangPattern)" />
+                    </svg>
                 </div>
 
-                <!-- Pricing Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
-                    <!-- Paket Company Profile -->
-                    <div class="flex flex-col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                        <div class="p-8 bg-gradient-to-b from-white to-gray-50 flex flex-col flex-grow">
-                            <!-- Package Header -->
-                            <div class="package-header">
-                                <div class="icon-container bg-gradient-to-r from-purple-500 to-purple-600">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                        viewBox="0 0 24 24" fill="white">
-                                        <path
-                                            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM8 18H4V8h4v10zm6 0h-4V8h4v10zm6 0h-4V8h4v10z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-black text-[#2C3E50]">Paket Company Profile</h3>
-                                    <p class="text-sm text-gray-500">Cocok untuk UMKM dan bisnis kecil</p>
-                                </div>
-                            </div>
-
-                            <!-- Price -->
-                            <div class="mb-6">
-                                <div class="flex items-baseline">
-                                    <span class="text-4xl font-black text-[#024673]">Rp 1.000.000</span>
-                                    <span class="text-sm text-gray-500 ml-2">/Tahun</span>
-                                </div>
-                                <p class="text-xs text-gray-400 mt-1">Termasuk Hosting 1 Tahun</p>
-                            </div>
-
-                            <!-- Features -->
-                            <div class="mb-8 flex-grow">
-                                <h4 class="font-semibold text-[#2C3E50] mb-4 text-base">Fitur Paket:</h4>
-                                <ul class="space-y-3">
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Desain profesional & responsif</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>1-5 menu</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Gratis domain & hosting 1 tahun</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Admin panel sederhana</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Fitur Chat menuju WhatsApp</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>SEO basic</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>1 Banner Slider</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>3 Hari Pengerjaan</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- CTA Button -->
-                            <button
-                                class="w-full bg-[#2C3E50] text-white py-3 px-6 rounded-full font-semibold hover:bg-[#2C3E50] transition-colors duration-200 transform hover:scale-105">Beli
-                                Paket</button>
-                        </div>
+                <!-- Team Cards -->
+<div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">                    <!-- Team Member 1 -->
+                    <div
+                        class="team-card bg-white rounded-lg p-6 shadow-lg transition-all duration-300"
+                        data-aos="fade-up"
+                        data-aos-delay="100">
+                        <img
+                            src="images/zada.jpg"
+                            alt="Anggota Tim 1"
+                            class="w-full h-80 object-cover rounded-md mb-4"
+                        />
+                        <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Nandana Zada Abiproya</h3>
+                        <p class="text-sm text-gray-500 mb-2">Lead Developer & Backend Developer</p>
+                        <p class="text-sm text-[#374151] leading-relaxed">
+                            Zada adalah pengembang utama yang handle dari Frontend dan Juga Backend.
+                        </p>
                     </div>
 
-                    <!-- Paket Instansi/Sekolah -->
-                    <div class="flex flex-col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div
-                            class="p-8 text-white flex flex-col flex-grow bg-gradient-to-b from-[#0066CC] to-[#2C3E50]">
-                            <!-- Package Header -->
-                            <div class="package-header">
-                                <div class="icon-container bg-white/20">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                        viewBox="0 0 24 24" fill="white">
-                                        <path
-                                            d="M21 8v9.5l-3-2.5v-3.2l-4.5 3.7-4.5-3.7v3.2l-3 2.5V8l7.5-6 7.5 6zm-9 9l3-2.5v-3.2l-3 2.5-3-2.5v3.2l3 2.5z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold">Paket Instansi / Sekolah</h3>
-                                    <p class="text-sm text-white/80">Direkomendasikan untuk instansi pemerintah,
-                                        yayasan dan organisasi pendidikan</p>
-                                </div>
-                            </div>
-
-                            <!-- Price -->
-                            <div class="mb-6">
-                                <div class="flex items-baseline">
-                                    <span class="text-4xl font-black">Rp 3.000.000</span>
-                                    <span class="text-sm text-white/80 ml-2">/Tahun</span>
-                                </div>
-                                <p class="text-xs text-white/60 mt-1">Termasuk Hosting 1 Tahun</p>
-                            </div>
-
-                            <!-- Features -->
-                            <div class="mb-8 flex-grow">
-                                <h4 class="font-semibold mb-4 text-base">Fitur Paket:</h4>
-                                <ul class="space-y-3">
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Dashboard modern & informatif</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Fitur posting berkesinambungan</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Struktur organisasi</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Gratis domain & hosting 1 tahun</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Fitur Chat menuju WhatsApp</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Admin panel user friendly</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Gratis 1 Logo</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>3 Banner Slider</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>5 Hari Pengerjaan</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- CTA Button -->
-                            <button
-                                class="w-full bg-white text-[#024673] py-3 px-6 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 transform hover:scale-105">Beli
-                                Paket</button>
-                        </div>
+                    <!-- Team Member 2 -->
+                    <div
+                        class="team-card bg-white rounded-lg p-6 shadow-lg transition-all duration-300"
+                        data-aos="fade-up"
+                        data-aos-delay="200">
+                        <img
+                            src="images/maulida.jpg"
+                            alt="Anggota Tim 2"
+                            class="w-full h-80 object-cover rounded-md mb-4"
+                        />
+                        <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Maulida Luthfi Hanifa</h3>
+                        <p class="text-sm text-gray-500 mb-2">UI/UX Designer</p>
+                        <p class="text-sm text-[#374151] leading-relaxed">
+                            Maulida menciptakan desain yang akan di implementasikan kedalam website customers.
+                        </p>
                     </div>
 
-                    <!-- Paket Custom Website -->
-                    <div class="flex flex-col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        <div class="p-8 bg-gradient-to-b from-white to-gray-50 flex flex-col flex-grow">
-                            <!-- Package Header -->
-                            <div class="package-header">
-                                <div class="icon-container bg-gradient-to-r from-blue-500 to-blue-600">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                        viewBox="0 0 24 24" fill="white">
-                                        <path
-                                            d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65c-.03-.24-.24-.42-.49-.42h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.22-.08-.49 0-.61.22l-2 3.46c-.12.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-[#2C3E50]">Paket Custom Website</h3>
-                                    <p class="text-sm text-gray-500">Solusi terlengkap untuk kebutuhan spesifik bisnis
-                                        atau pribadi Anda</p>
-                                </div>
-                            </div>
+                    <!-- Team Member 3 -->
+                    <div
+                        class="team-card bg-white rounded-lg p-6 shadow-lg transition-all duration-300"
+                        data-aos="fade-up"
+                        data-aos-delay="300">
+                        <img
+                            src="images/akbar.jpg"
+                            alt="Anggota Tim 3"
+                            class="w-full h-80 object-cover rounded-md mb-4"
+                        />
+                        <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Akbar Rizqy Effendi</h3>
+                        <p class="text-sm text-gray-500 mb-2">Frontend Developer</p>
+                        <p class="text-sm text-[#374151] leading-relaxed">
+                            Akbar yang bertanggung jawab penuh atas sistem Frontend untuk memastikan performa website yang optimal.
+                        </p>
+                    </div>
 
-                            <!-- Price -->
-                            <div class="mb-6">
-                                <div class="flex items-baseline">
-                                    <span class="text-4xl font-black text-[#024673]">Rp 5.000.000</span>
-                                    <span class="text-sm text-gray-500 ml-2">/Tahun</span>
-                                </div>
-                                <p class="text-xs text-gray-400 mt-1">Termasuk Hosting 1 Tahun</p>
-                            </div>
+                    <!-- Team Member 4 -->
+                    <div
+                        class="team-card bg-white rounded-lg p-6 shadow-lg transition-all duration-300"
+                        data-aos="fade-up"
+                        data-aos-delay="400">
+                        <img
+                            src="images/dea.jpg"
+                            alt="Anggota Tim 4"
+                            class="w-full h-80 object-cover rounded-md mb-4"
+                        />
+                        <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Dea Adeliana Putri</h3>
+                        <p class="text-sm text-gray-500 mb-2">Project Manager</p>
+                        <p class="text-sm text-[#374151] leading-relaxed">
+                            Dea bertanggung jawab untuk merancang, merencanakan, mengelola tim, mengontrol waktu dan anggaran,
+                            berkomunikasi dengan Developer, mengawasi pelaksanaan, dan menutup proyek dengan laporan akhir.
+                        </p>
+                    </div>
 
-                            <!-- Features -->
-                            <div class="mb-8 flex-grow">
-                                <h4 class="font-semibold text-[#2C3E50] mb-4 text-base">Fitur Paket:</h4>
-                                <ul class="space-y-3">
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Desain sesuai permintaan</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Fitur dan modul kustom</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Gratis domain & hosting 1 tahun</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Integrasi WhatsApp, Maps, dan form kontak</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Fitur Chat menuju WhatsApp</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Admin panel advanced</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>Gratis 1 Logo</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>5 Banner Slider</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>7 Hari Pengerjaan</span>
-                                    </li>
-                                    <li class="flex items-center text-sm">
-                                        <div
-                                            class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                                <path d="M10 3L4.5 8.5L2 6" />
-                                            </svg>
-                                        </div>
-                                        <span>3 kali revisi desain</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- CTA Button -->
-                            <button
-                                class="w-full bg-[#2C3E50] text-white py-3 px-6 rounded-full font-semibold hover:bg-[#0369a1] transition-colors duration-200 transform hover:scale-105">Beli
-                                Paket</button>
-                        </div>
+                    <!-- Team Member 5 -->
+                    <div
+                        class="team-card bg-white rounded-lg p-6 shadow-lg transition-all duration-300"
+                        data-aos="fade-up"
+                        data-aos-delay="500">
+                        <img
+                            src="images/vivi.jpg"
+                            alt="Anggota Tim 5"
+                            class="w-full h-80 object-cover rounded-md mb-4"
+                        />
+                        <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Vivi Amelia</h3>
+                        <p class="text-sm text-gray-500 mb-2">Graphic Designer & Content Designer</p>
+                        <p class="text-sm text-[#374151] leading-relaxed">
+                            Vivi bertanggung jawab untuk membuat desain grafis dan konten yang menarik untuk mendukung proyek digital.
+                        </p>
                     </div>
                 </div>
+            </section>
 
-                <!-- Bottom CTA -->
-                <div class="text-center mt-12" data-aos="fade-up" data-aos-duration="800">
-                    <div class="bg-[#0066CC] rounded-2xl p-8 text-white shadow-lg">
-                        <h3 class="text-2xl font-bold mb-4">LAYANAN KONSULTASI MULAI JAM 08:00 - 21:00</h3>
-                        <p class="text-lg mb-6 text-white/90">Butuh konsultasi lebih lanjut? Tim kami siap membantu
-                            Anda memilih paket yang tepat!</p>
-                        <button id="openConsultationModalBottom"
-                            class="chat-consultation-btn bg-white text-[#024673] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center gap-2 transform hover:scale-105">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" />
-                            </svg>
-                            Chat Konsultasi Secara Langsung
+    <section
+                class="portfolio py-16 px-8 lg:px-16 bg-gradient-to-b from-[#f3f4f6] to-[#e8ebf2] relative w-full overflow-hidden">
+                <div class="max-w-7xl mx-auto text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                    <div class="flex justify-center items-center gap-4">
+                        <div class="h-px bg-[#334155] w-36"></div>
+                        <h2 class="text-[36px] text-[#2C3E50] font-black">PORTOFOLIO KAMI</h2>
+                        <div class="h-px bg-[#334155] w-36"></div>
+                    </div>
+                    <p class="text-lg text-[#374151] max-w-2xl mx-auto mt-4">Lihat karya terbaik kami yang telah membantu
+                        UMKM, instansi, dan komunitas tampil profesional di dunia digital.</p>
+                </div>
+
+                <!-- Main Category Filter Buttons -->
+                <div class="max-w-7xl mx-auto relative z-10 mb-6">
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <button
+                            class="main-filter-btn active px-6 py-3 rounded-full font-semibold text-sm border-2 border-[#024673] text-[#024673] hover:bg-[#024673] hover:text-white transition-all duration-200"
+                            data-main-filter="website">
+                            Website
+                        </button>
+                        <button
+                            class="main-filter-btn px-6 py-3 rounded-full font-semibold text-sm border-2 border-[#024673] text-[#024673] hover:bg-[#024673] hover:text-white transition-all duration-300 transform hover:scale-105"
+                            data-main-filter="aplikasi">
+                            Aplikasi
                         </button>
                     </div>
                 </div>
-            </div>
-        </section>
 
-<!-- Team Section -->
-        <section
-            class="tim py-16 px-8 lg:px-16 bg-gradient-to-b from-[#f3f4f6] to-[#e8ebf2] relative w-full overflow-hidden">
-            <div class="max-w-7xl mx-auto text-center mb-12" data-aos="fade-up" data-aos-duration="800">
-                <div class="flex justify-center items-center gap-4">
-                    <div class="h-px bg-[#334155] w-36"></div>
-                    <h2 class="text-[36px] text-[#2C3E50] font-black">TIM KAMI</h2>
-                    <div class="h-px bg-[#334155] w-36"></div>
-                </div>
-                <p class="text-lg text-[#374151] max-w-2xl mx-auto mt-4">
-                    Temui tim profesional kami Khrisna yang berdedikasi untuk membantu bisnis Anda go digital.
-                </p>
-            </div>
-
-            <!-- Background pattern -->
-            <div class="absolute inset-0 z-0 opacity-10">
-                <svg width="100%" height="100%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                    <pattern id="parangPattern" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="rotate(45)">
-                        <path d="M0 20 L10 0 L20 20 L30 0 L40 20" stroke="#024673" stroke-width="1.5" fill="none" />
-                        <path d="M0 30 L10 10 L20 30 L30 10 L40 30" stroke="#024673" stroke-width="1.5" fill="none" />
-                        <circle cx="10" cy="10" r="2" fill="#024673" />
-                        <circle cx="30" cy="10" r="2" fill="#024673" />
-                        <circle cx="10" cy="30" r="2" fill="#024673" />
-                        <circle cx="30" cy="30" r="2" fill="#024673" />
-                    </pattern>
-                    <rect width="100%" height="100%" fill="url(#parangPattern)" />
-                </svg>
-            </div>
-
-            <!-- Team Cards -->
-            <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Team Member 1 -->
-                <div
-                    class="team-card bg-white rounded-lg p-6 shadow-lg transition-all duration-300"
-                    data-aos="fade-up"
-                    data-aos-delay="100">
-                    <img
-                        src="/img/zada.jpg"
-                        alt="Anggota Tim 1"
-                        class="w-full h-80 object-cover rounded-md mb-4"
-                    />
-                    <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Nandana Zada Abiproya</h3>
-                    <p class="text-sm text-gray-500 mb-2">Lead Developer & Backend Developer</p>
-                    <p class="text-sm text-[#374151] leading-relaxed">
-                        Zada adalah pengembang utama yang handle dari Frontend dan Juga Backend.
-                    </p>
-                </div>
-
-                <!-- Team Member 2 -->
-                <div
-                    class="team-card bg-white rounded-lg p-6 shadow-lg transition-all duration-300"
-                    data-aos="fade-up"
-                    data-aos-delay="200">
-                    <img
-                        src="/img/maulida.jpg"
-                        alt="Anggota Tim 2"
-                        class="w-full h-80 object-cover rounded-md mb-4"
-                    />
-                    <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Maulida Luthfi Hanifa</h3>
-                    <p class="text-sm text-gray-500 mb-2">UI/UX Designer</p>
-                    <p class="text-sm text-[#374151] leading-relaxed">
-                        Maulida menciptakan desain yang akan di implementasikan kedalam website customers.
-                    </p>
-                </div>
-
-                <!-- Team Member 3 -->
-                <div
-                    class="team-card bg-white rounded-lg p-6 shadow-lg transition-all duration-300"
-                    data-aos="fade-up"
-                    data-aos-delay="300">
-                    <img
-                        src="/img/akbar.jpg"
-                        alt="Anggota Tim 3"
-                        class="w-full h-80 object-cover rounded-md mb-4"
-                    />
-                    <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Akbar Rizqy Effendi</h3>
-                    <p class="text-sm text-gray-500 mb-2">Frontend Developer</p>
-                    <p class="text-sm text-[#374151] leading-relaxed">
-                        Akbar yang bertanggung jawab penuh atas sistem Frontend untuk memastikan performa website yang optimal.
-                    </p>
-                </div>
-
-                <!-- Team Member 4 -->
-                <div
-                    class="team-card bg-white rounded-lg p-6 shadow-lg transition-all duration-300"
-                    data-aos="fade-up"
-                    data-aos-delay="400">
-                    <img
-                        src="/img/dea.jpg"
-                        alt="Anggota Tim 4"
-                        class="w-full h-80 object-cover rounded-md mb-4"
-                    />
-                    <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Dea Adeliana Putri</h3>
-                    <p class="text-sm text-gray-500 mb-2">Project Manager</p>
-                    <p class="text-sm text-[#374151] leading-relaxed">
-                        Dea bertanggung jawab untuk merancang, merencanakan, mengelola tim, mengontrol waktu dan anggaran,
-                        berkomunikasi dengan Developer, mengawasi pelaksanaan, dan menutup proyek dengan laporan akhir.
-                    </p>
-                </div>
-
-                <!-- Team Member 5 -->
-                <div
-                    class="team-card bg-white rounded-lg p-6 shadow-lg transition-all duration-300"
-                    data-aos="fade-up"
-                    data-aos-delay="500">
-                    <img
-                        src="/img/vivi.jpg"
-                        alt="Anggota Tim 5"
-                        class="w-full h-80 object-cover rounded-md mb-4"
-                    />
-                    <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Vivi Amelia</h3>
-                    <p class="text-sm text-gray-500 mb-2">Graphic Designer & Content Designer</p>
-                    <p class="text-sm text-[#374151] leading-relaxed">
-                        Vivi bertanggung jawab untuk membuat desain grafis dan konten yang menarik untuk mendukung proyek digital.
-                    </p>
-                </div>
-            </div>
-        </section>
-
- <section
-            class="portfolio py-16 px-8 lg:px-16 bg-gradient-to-b from-[#f3f4f6] to-[#e8ebf2] relative w-full overflow-hidden">
-            <div class="max-w-7xl mx-auto text-center mb-12" data-aos="fade-up" data-aos-duration="800">
-                <div class="flex justify-center items-center gap-4">
-                    <div class="h-px bg-[#334155] w-36"></div>
-                    <h2 class="text-[36px] text-[#2C3E50] font-black">PORTOFOLIO KAMI</h2>
-                    <div class="h-px bg-[#334155] w-36"></div>
-                </div>
-                <p class="text-lg text-[#374151] max-w-2xl mx-auto mt-4">Lihat karya terbaik kami yang telah membantu
-                    UMKM, instansi, dan komunitas tampil profesional di dunia digital.</p>
-            </div>
-
-            <!-- Main Category Filter Buttons -->
-            <div class="max-w-7xl mx-auto relative z-10 mb-6">
-                <div class="flex flex-wrap justify-center gap-4">
-                    <button
-                        class="main-filter-btn active px-6 py-3 rounded-full font-semibold text-sm border-2 border-[#024673] text-[#024673] hover:bg-[#024673] hover:text-white transition-all duration-200"
-                        data-main-filter="website">
-                        Website
-                    </button>
-                    <button
-                        class="main-filter-btn px-6 py-3 rounded-full font-semibold text-sm border-2 border-[#024673] text-[#024673] hover:bg-[#024673] hover:text-white transition-all duration-300 transform hover:scale-105"
-                        data-main-filter="aplikasi">
-                        Aplikasi
-                    </button>
-                </div>
-            </div>
-
-            <!-- Subcategory Filter Buttons -->
-            <div class="max-w-7xl mx-auto relative z-10 mb-8" id="subcategory-filters">
-                <div class="flex flex-wrap justify-center gap-4">
-                    <button
-                        class="filter-btn active px-6 py-3 rounded-full font-semibold text-sm border-2 border-[#024673] text-[#024673] hover:bg-[#024673] hover:text-white transition-all duration-300 transform hover:scale-105"
-                        data-filter="all">
-                        Semua Project
-                    </button>
-                    <button
-                        class="filter-btn px-6 py-3 rounded-full font-semibold text-sm border-2 border-[#024673] text-[#024673] hover:bg-[#024673] hover:text-white transition-all duration-300 transform hover:scale-105"
-                        data-filter="company-profile">
-                        Website Company Profile
-                    </button>
-                    <button
-                        class="filter-btn px-6 py-3 rounded-full font-semibold text-sm border-2 border-[#024673] text-[#024673] hover:bg-[#024673] hover:text-white transition-all duration-300 transform hover:scale-105"
-                        data-filter="instansi">
-                        Instansi/Sekolah
-                    </button>
-                    <button
-                        class="filter-btn px-6 py-3 rounded-full font-semibold text-sm border-2 border-[#024673] text-[#024673] hover:bg-[#024673] hover:text-white transition-all duration-300 transform hover:scale-105"
-                        data-filter="custom">
-                        Custom
-                    </button>
-                </div>
-            </div>
-
-            <!-- Image Modal -->
-            <div id="imageModal"
-                class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
-                <div class="relative bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto">
-                    <button id="closeModal"
-                        class="absolute top-4 right-4 text-white bg-[#024673] rounded-full p-2 hover:bg-[#1e3a8a] transition-all duration-300"
-                        aria-label="Close modal">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    <img id="modalImage" src="" alt="Project Image"
-                        class="w-full h-auto object-contain max-h-[80vh] p-4">
-                </div>
-            </div>
-
-            <!-- Portfolio Cards -->
-            <div class="max-w-7xl mx-auto relative z-10">
-                <!-- Main Grid for Aplikasi (Hidden Initially) -->
-                <div id="main-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 hidden"></div>
-                <!-- Website Projects -->
-                <div id="website-projects" class="mb-12">
-                    <h3 class="text-2xl font-bold text-[#2C3E50] mb-6">Website</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Company Profile Project -->
-                        <div class="project-card show relative bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group cursor-pointer"
-                            data-main-category="website" data-category="company-profile"
-                            data-image="/img/cetaphil.jpg">
-                            <div class="relative h-64 overflow-hidden">
-                                <img src="/img/cetaphil.jpg" alt="Company Profile"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-[#024673]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                </div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Website Company Profile</h3>
-                                <p class="text-sm text-[#374151] mb-4 leading-relaxed">Website company profile untuk
-                                    perusahaan dengan desain modern dan profesional yang menampilkan profil lengkap
-                                    perusahaan.</p>
-                                <a href="#"
-                                    class="view-project inline-flex items-center px-4 py-2 bg-[#024673] text-white rounded-full font-semibold text-sm hover:bg-[#1e3a8a] transition-all duration-300 transform hover:scale-105">
-                                    Lihat Proyek
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div
-                                class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                Company Profile</div>
-                        </div>
-
-                        <!-- Instansi/Sekolah Project -->
-                        <div class="project-card show relative bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group cursor-pointer"
-                            data-main-category="website" data-category="instansi"
-                            data-image="/img/akumulasi.jpg">
-                            <div class="relative h-64 overflow-hidden">
-                                <img src="/img/akumulasi.jpg" alt="Website Sekolah"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-[#024673]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                </div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Website Instansi/Sekolah</h3>
-                                <p class="text-sm text-[#374151] mb-4 leading-relaxed">Website informatif untuk
-                                    instansi
-                                    pemerintah dan sekolah dengan dashboard modern dan sistem informasi terintegrasi.
-                                </p>
-                                <a href="#"
-                                    class="view-project inline-flex items-center px-4 py-2 bg-[#024673] text-white rounded-full font-semibold text-sm hover:bg-[#1e3a8a] transition-all duration-300 transform hover:scale-105">
-                                    Lihat Proyek
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div
-                                class="absolute top-4 left-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                Instansi</div>
-                        </div>
-
-                        <!-- Custom Project -->
-                        <div class="project-card show relative bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group cursor-pointer"
-                            data-main-category="website" data-category="custom"
-                            data-image="/img/vistore.jpg">
-                            <div class="relative h-64 overflow-hidden">
-                                <img src="/img/vistore.jpg" alt="Custom Project"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-[#024673]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                </div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Custom Website</h3>
-                                <p class="text-sm text-[#374151] mb-4 leading-relaxed">Pengembangan website custom
-                                    sesuai kebutuhan spesifik klien dengan fitur-fitur khusus dan desain unik.</p>
-                                <a href="#"
-                                    class="view-project inline-flex items-center px-4 py-2 bg-[#024673] text-white rounded-full font-semibold text-sm hover:bg-[#1e3a8a] transition-all duration-300 transform hover:scale-105">
-                                    Lihat Proyek
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div
-                                class="absolute top-4 left-4 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                Custom</div>
-                        </div>
+                <!-- Subcategory Filter Buttons -->
+                <div class="max-w-7xl mx-auto relative z-10 mb-8" id="subcategory-filters">
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <button
+                            class="filter-btn active px-6 py-3 rounded-full font-semibold text-sm border-2 border-[#024673] text-[#024673] hover:bg-[#024673] hover:text-white transition-all duration-300 transform hover:scale-105"
+                            data-filter="all">
+                            Semua Project
+                        </button>
+                        <button
+                            class="filter-btn px-6 py-3 rounded-full font-semibold text-sm border-2 border-[#024673] text-[#024673] hover:bg-[#024673] hover:text-white transition-all duration-300 transform hover:scale-105"
+                            data-filter="company-profile">
+                            Website Company Profile
+                        </button>
+                        <button
+                            class="filter-btn px-6 py-3 rounded-full font-semibold text-sm border-2 border-[#024673] text-[#024673] hover:bg-[#024673] hover:text-white transition-all duration-300 transform hover:scale-105"
+                            data-filter="instansi">
+                            Instansi/Sekolah
+                        </button>
+                        <button
+                            class="filter-btn px-6 py-3 rounded-full font-semibold text-sm border-2 border-[#024673] text-[#024673] hover:bg-[#024673] hover:text-white transition-all duration-300 transform hover:scale-105"
+                            data-filter="custom">
+                            Custom
+                        </button>
                     </div>
                 </div>
 
-                <!-- Aplikasi Projects (Hidden Initially) -->
-                <div id="aplikasi-projects" class="mb-12 hidden">
-                    <h3 class="text-2xl font-bold text-[#2C3E50] mb-6">Aplikasi</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Aplikasi Project Example -->
-                        <div class="project-card relative bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group cursor-pointer"
-                            data-main-category="aplikasi" data-category="aplikasi"
-                            data-image="/img/aplikasi-sample.jpg">
-                            <div class="relative h-64 overflow-hidden">
-                                <img src="/img/aplikasi-sample.jpg" alt="Aplikasi Sample"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-[#024673]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                </div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Aplikasi Mobile</h3>
-                                <p class="text-sm text-[#374151] mb-4 leading-relaxed">Aplikasi mobile dengan fitur
-                                    kustom untuk mendukung kebutuhan bisnis Anda.</p>
-                                <a href="#"
-                                    class="view-project inline-flex items-center px-4 py-2 bg-[#024673] text-white rounded-full font-semibold text-sm hover:bg-[#1e3a8a] transition-all duration-300 transform hover:scale-105">
-                                    Lihat Proyek
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div
-                                class="absolute top-4 left-4 bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                Aplikasi</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CTA Button -->
-                <div class="text-center mt-12">
-                    <a href="#"
-                        class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-[#024673] to-[#0369a1] text-white rounded-full font-semibold text-base hover:bg-[#1e3a8a] transition-all duration-300 transform hover:scale-105">
-                        Lihat Semua Proyek
-                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <footer class="relative bg-[#2C3E50] text-white overflow-hidden">
-            <div class="relative w-full h-24 bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
-                <svg class="absolute bottom-0 w-full h-full" viewBox="0 0 1440 100" preserveAspectRatio="none">
-                    <path class="wave fill-[#2C3E50]"
-                        d="M0,40 C150,80 350,0 500,40 C650,80 850,0 1000,40 C1150,80 1350,0 1440,40 L1440,100 L0,100 Z" />
-                </svg>
-                <svg class="absolute bottom-0 w-full h-full opacity-80" viewBox="0 0 1440 100"
-                    preserveAspectRatio="none">
-                    <path class="wave2 fill-[#2C3E50]"
-                        d="M0,60 C150,20 350,60 500,20 C650,60 850,20 1000,60 C1150,20 1350,60 1440,20 L1440,100 L0,100 Z" />
-                </svg>
-                <svg class="absolute bottom-0 w-full h-full opacity-70" viewBox="0 0 1440 100"
-                    preserveAspectRatio="none">
-                    <path class="wave3 fill-[#2C3E50]"
-                        d="M0,30 C150,70 350,30 500,70 C650,30 850,70 1000,30 C1150,70 1350,30 1440,70 L1440,100 L0,100 Z" />
-                </svg>
-            </div>
-
-            <!-- Footer Content -->
-            <div class="relative z-10 py-6 px-4 lg:px-8 max-w-7xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-                    <!-- Logo and Description -->
-                    <div class="space-y-6 text-center md:text-left">
-                        <img src="/img/logo-putih2.png" alt="Joglo Media Logo" class="h-16 mx-auto md:mx-0 mb-4" />
-                        <p class="text-sm text-gray-300">Joglo Media Web Development adalah mitra terbaik untuk mendigitalisasi bisnis Anda dengan solusi website profesional dan terjangkau.</p>
-                    </div>
-
-                    <!-- Quick Links -->
-                    <div>
-                        <h4 class="text-lg font-bold mb-4">Quick Links</h4>
-                        <ul class="space-y-2 text-sm text-gray-300">
-                            <li><a href="#" class="hover:text-white transition-colors">Beranda</a></li>
-                            <li><a href="#" class="hover:text-white transition-colors">Tentang Kami</a></li>
-                            <li><a href="#" class="hover:text-white transition-colors">Paket</a></li>
-                            <li><a href="#" class="hover:text-white transition-colors">Portofolio</a></li>
-                            <li><a href="#" class="hover:text-white transition-colors">Kontak</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Services -->
-                    <div>
-                        <h4 class="text-lg font-bold mb-4">Layanan</h4>
-                        <ul class="space-y-2 text-sm text-gray-300">
-                            <li><a href="#" class="hover:text-white transition-colors">Desain Website</a></li>
-                            <li><a href="#" class="hover:text-white transition-colors">Maintenance Website</a></li>
-                            <li><a href="#" class="hover:text-white transition-colors">Konsultasi Digital</a></li>
-                            <li><a href="#" class="hover:text-white transition-colors">SEO & Optimasi</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Contact -->
-                    <div>
-                        <h4 class="text-lg font-bold mb-4">Kontak Kami</h4>
-                        <ul class="space-y-2 text-sm text-gray-300">
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                                Jl. Raya Jogja-Solo, Yogyakarta
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M3 5h18M3 12h18M3 19h18"/>
-                                </svg>
-                                +62 812-3456-7890
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
-                                </svg>
-                                info@joglomedia.com
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
-                                </svg>
-                                Chat via WhatsApp
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Social Media Icons -->
-                <div class="mt-8 text-center">
-                    <div class="flex justify-center gap-4">
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                <!-- Image Modal -->
+                <div id="imageModal"
+                    class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+                    <div class="relative bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto">
+                        <button id="closeModal"
+                            class="absolute top-4 right-4 text-white bg-[#024673] rounded-full p-2 hover:bg-[#1e3a8a] transition-all duration-300"
+                            aria-label="Close modal">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 18L18 6M6 6l12 12" />
                             </svg>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.22-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 3.08-1.95 5.73-4.9 6.93z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/>
+                        </button>
+                        <img id="modalImage" src="" alt="Project Image"
+                            class="w-full h-auto object-contain max-h-[80vh] p-4">
+                    </div>
+                </div>
+
+                <!-- Portfolio Cards -->
+                <div class="max-w-7xl mx-auto relative z-10">
+                    <!-- Main Grid for Aplikasi (Hidden Initially) -->
+                    <div id="main-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 hidden"></div>
+                    <!-- Website Projects -->
+                    <div id="website-projects" class="mb-12">
+                        <h3 class="text-2xl font-bold text-[#2C3E50] mb-6">Website</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- Company Profile Project -->
+                            <div class="project-card show relative bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group cursor-pointer"
+                                data-main-category="website" data-category="company-profile"
+                                data-image="images/cetaphil.jpg">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="images/cetaphil.jpg" alt="Company Profile"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-[#024673]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Simemberjlb</h3>
+                                    <p class="text-sm text-[#374151] mb-4 leading-relaxed">Website untuk </p>
+                                    <a href="#"
+                                        class="view-project inline-flex items-center px-4 py-2 bg-[#024673] text-white rounded-full font-semibold text-sm hover:bg-[#1e3a8a] transition-all duration-300 transform hover:scale-105">
+                                        Lihat Proyek
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M5 12h14M12 5l7 7-7 7" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div
+                                    class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Company Profile</div>
+                            </div>
+
+                            <!-- Instansi/Sekolah Project -->
+                            <div class="project-card show relative bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group cursor-pointer"
+                                data-main-category="website" data-category="instansi"
+                                data-image="images/akumulasi.jpg">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="images/akumulasi.jpg" alt="Website Sekolah"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-[#024673]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Website Instansi/Sekolah</h3>
+                                    <p class="text-sm text-[#374151] mb-4 leading-relaxed">Website informatif untuk
+                                        instansi
+                                        pemerintah dan sekolah dengan dashboard modern dan sistem informasi terintegrasi.
+                                    </p>
+                                    <a href="#"
+                                        class="view-project inline-flex items-center px-4 py-2 bg-[#024673] text-white rounded-full font-semibold text-sm hover:bg-[#1e3a8a] transition-all duration-300 transform hover:scale-105">
+                                        Lihat Proyek
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M5 12h14M12 5l7 7-7 7" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div
+                                    class="absolute top-4 left-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Instansi</div>
+                            </div>
+
+                            <!-- Custom Project -->
+                            <div class="project-card show relative bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group cursor-pointer"
+                                data-main-category="website" data-category="custom"
+                                data-image="images/vistore.jpg">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="images/vistore.jpg" alt="Custom Project"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-[#024673]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Custom Website</h3>
+                                    <p class="text-sm text-[#374151] mb-4 leading-relaxed">Pengembangan website custom
+                                        sesuai kebutuhan spesifik klien dengan fitur-fitur khusus dan desain unik.</p>
+                                    <a href="#"
+                                        class="view-project inline-flex items-center px-4 py-2 bg-[#024673] text-white rounded-full font-semibold text-sm hover:bg-[#1e3a8a] transition-all duration-300 transform hover:scale-105">
+                                        Lihat Proyek
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M5 12h14M12 5l7 7-7 7" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div
+                                    class="absolute top-4 left-4 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Custom</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Aplikasi Projects (Hidden Initially) -->
+                    <div id="aplikasi-projects" class="mb-12 hidden">
+                        <h3 class="text-2xl font-bold text-[#2C3E50] mb-6">Aplikasi</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- Aplikasi Project Example -->
+                            <div class="project-card relative bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group cursor-pointer"
+                                data-main-category="aplikasi" data-category="aplikasi"
+                                data-image="images/aplikasi-sample.jpg">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="images/aplikasi-sample.jpg" alt="Aplikasi Sample"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-[#024673]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-[#2C3E50] mb-2">Aplikasi Mobile</h3>
+                                    <p class="text-sm text-[#374151] mb-4 leading-relaxed">Aplikasi mobile dengan fitur
+                                        kustom untuk mendukung kebutuhan bisnis Anda.</p>
+                                    <a href="#"
+                                        class="view-project inline-flex items-center px-4 py-2 bg-[#024673] text-white rounded-full font-semibold text-sm hover:bg-[#1e3a8a] transition-all duration-300 transform hover:scale-105">
+                                        Lihat Proyek
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M5 12h14M12 5l7 7-7 7" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div
+                                    class="absolute top-4 left-4 bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Aplikasi</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="text-center mt-12">
+                        <a href="#"
+                            class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-[#024673] to-[#0369a1] text-white rounded-full font-semibold text-base hover:bg-[#1e3a8a] transition-all duration-300 transform hover:scale-105">
+                            Lihat Semua Proyek
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
                         </a>
                     </div>
                 </div>
+            </section>
 
-                <!-- Copyright -->
-                <div class="mt-8 text-center text-xs text-gray-400">
-                    <p>© 2025 Joglo Media Web Development. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-
-<div id="consultationModal" class="modal-overlay">
-            <div class="modal-content">
-                <button id="closeConsultationModal" class="modal-close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+    <footer class="relative bg-[#2C3E50] text-white overflow-hidden">
+                <div class="relative w-full h-24 bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
+                    <svg class="absolute bottom-0 w-full h-full" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                        <path class="wave fill-[#2C3E50]"
+                            d="M0,40 C150,80 350,0 500,40 C650,80 850,0 1000,40 C1150,80 1350,0 1440,40 L1440,100 L0,100 Z" />
                     </svg>
-                </button>
-                <h2>Konsultasi Gratis</h2>
-                <form id="consultationForm">
-                    <label for="name">Nama</label>
-                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required />
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required />
-                    <label for="message">Pesan</label>
-                    <input type="text" id="message" name="message" placeholder="Ceritakan kebutuhan Anda" required />
-                    <button type="submit">Kirim Konsultasi</button>
-                </form>
+                    <svg class="absolute bottom-0 w-full h-full opacity-80" viewBox="0 0 1440 100"
+                        preserveAspectRatio="none">
+                        <path class="wave2 fill-[#2C3E50]"
+                            d="M0,60 C150,20 350,60 500,20 C650,60 850,20 1000,60 C1150,20 1350,60 1440,20 L1440,100 L0,100 Z" />
+                    </svg>
+                    <svg class="absolute bottom-0 w-full h-full opacity-70" viewBox="0 0 1440 100"
+                        preserveAspectRatio="none">
+                        <path class="wave3 fill-[#2C3E50]"
+                            d="M0,30 C150,70 350,30 500,70 C650,30 850,70 1000,30 C1150,70 1350,30 1440,70 L1440,100 L0,100 Z" />
+                    </svg>
+                </div>
+
+                <!-- Footer Content -->
+                <div class="relative z-10 py-6 px-4 lg:px-8 max-w-7xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                        <!-- Logo and Description -->
+                        <div class="space-y-6 text-center md:text-left">
+                            <img src="images/logo-putih2.png" alt="Joglo Media Logo" class="h-16 mx-auto md:mx-0 mb-4" />
+                            <p class="text-sm text-gray-300">Joglo Media Web Development adalah mitra terbaik untuk mendigitalisasi bisnis Anda dengan solusi website profesional dan terjangkau.</p>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div>
+                            <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li><a href="#" class="hover:text-white transition-colors">Beranda</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Paket</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Portofolio</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Kontak</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Services -->
+                        <div>
+                            <h4 class="text-lg font-bold mb-4">Layanan</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li><a href="#" class="hover:text-white transition-colors">Desain Website</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Maintenance Website</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Konsultasi Digital</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">SEO & Optimasi</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact -->
+                        <div>
+                            <h4 class="text-lg font-bold mb-4">Kontak Kami</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                    Jl. Raya Jogja-Solo, Yogyakarta
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 5h18M3 12h18M3 19h18"/>
+                                    </svg>
+                                    +62 812-3456-7890
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                    joglomediaweb.dev@gmail.com
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Icons -->
+                    <div class="mt-8 text-center">
+                        <div class="flex justify-center gap-4">
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.22-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 3.08-1.95 5.73-4.9 6.93z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Copyright -->
+                    <div class="mt-8 text-center text-xs text-gray-400">
+                        <p>© 2025 Joglo Media Web Development. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+
+    <div id="consultationModal" class="modal-overlay">
+                <div class="modal-content">
+                    <button id="closeConsultationModal" class="modal-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
+                    <h2>Konsultasi Gratis</h2>
+                    <form id="consultationForm">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required />
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required />
+                        <label for="message">Pesan</label>
+                        <input type="text" id="message" name="message" placeholder="Ceritakan kebutuhan Anda" required />
+                        <button type="submit">Kirim Konsultasi</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-<script src="./js/main.js"></script>
-<script>
-// AOS Initialization
-if (typeof AOS !== 'undefined') {
-    AOS.init();
-}
+    <script src="js/main.js"></script>
 
-// Modal Konsultasi Toggle
-const openModalButtons = document.querySelectorAll('#openConsultationModal, #openConsultationModalBottom');
-const consultationModal = document.getElementById('consultationModal');
-const closeModalButton = document.querySelector('.modal-close');
-
-if (openModalButtons.length > 0 && consultationModal) {
-    openModalButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            consultationModal.classList.add('active');
-        });
-    });
-}
-
-if (closeModalButton) {
-    closeModalButton.addEventListener('click', closeConsultationModal);
-}
-
-function closeConsultationModal() {
-    if (consultationModal) {
-        consultationModal.classList.remove('active');
-    }
-}
-
-function closeModal() {
-    closeConsultationModal();
-}
-
-// Form validation
-function validateForm() {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-
-    // Validasi nama
-    if (!name || name.length < 2) {
-        alert('Nama harus diisi minimal 2 karakter!');
-        return false;
-    }
-
-    // Validasi email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRegex.test(email)) {
-        alert('Email harus diisi dengan format yang benar!');
-        return false;
-    }
-
-    // Validasi phone
-    const phoneDigits = phone.replace(/[^0-9]/g, '');
-    if (!phone || phoneDigits.length < 10) {
-        alert('Nomor telepon harus diisi minimal 10 digit!');
-        return false;
-    }
-
-    // Tampilkan loading
-    const submitButton = document.querySelector('button[type="submit"]');
-    if (submitButton) {
-        submitButton.textContent = 'Mengirim...';
-        submitButton.disabled = true;
-    }
-
-    return true;
-}
-
-
-// Portfolio Filter Logic (jika ada)
-document.addEventListener('DOMContentLoaded', () => {
-    const mainFilterButtons = document.querySelectorAll('.main-filter-btn');
-    const subFilterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-    const subcategoryFilters = document.getElementById('subcategory-filters');
-    const websiteProjects = document.getElementById('website-projects');
-    const aplikasiProjects = document.getElementById('aplikasi-projects');
-
-    if (mainFilterButtons.length === 0) return; // Skip jika tidak ada filter
-
-    function filterProjects() {
-        const activeMainFilter = document.querySelector('.main-filter-btn.active')?.getAttribute('data-main-filter') || 'website';
-        const activeSubFilter = document.querySelector('.filter-btn.active')?.getAttribute('data-filter') || 'all';
-
-        projectCards.forEach(card => {
-            card.classList.add('hidden');
-        });
-
-        projectCards.forEach(card => {
-            const cardMainCategory = card.dataset.mainCategory;
-            const cardCategory = card.dataset.category;
-
-            if (activeMainFilter === 'website' && cardMainCategory === 'website') {
-                if (activeSubFilter === 'all' || cardCategory === activeSubFilter) {
-                    card.classList.remove('hidden');
-                }
-            } else if (activeMainFilter === 'aplikasi' && cardMainCategory === 'aplikasi') {
-                card.classList.remove('hidden');
-            }
-        });
-
-        if (websiteProjects && aplikasiProjects && subcategoryFilters) {
-            if (activeMainFilter === 'website') {
-                websiteProjects.classList.remove('hidden');
-                aplikasiProjects.classList.add('hidden');
-                subcategoryFilters.classList.remove('hidden');
-            } else if (activeMainFilter === 'aplikasi') {
-                websiteProjects.classList.add('hidden');
-                aplikasiProjects.classList.remove('hidden');
-                subcategoryFilters.classList.add('hidden');
-            }
-        }
-    }
-
-    mainFilterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            mainFilterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            subFilterButtons.forEach(btn => btn.classList.remove('active'));
-            const allProjectBtn = document.querySelector('.filter-btn[data-filter="all"]');
-            if (allProjectBtn) allProjectBtn.classList.add('active');
-
-            filterProjects();
-        });
-    });
-
-    subFilterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            subFilterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            filterProjects();
-        });
-    });
-
-    filterProjects();
-});
-
-// Modal Image Viewer (jika ada)
-function openModal(imageSrc) {
-    const modal = document.getElementById('imageModal');
-    const modalImage = document.getElementById('modalImage');
-    if (modal && modalImage) {
-        modalImage.src = imageSrc;
-        modal.classList.remove('hidden');
-    }
-}
-
-const closeImageModal = document.getElementById('closeModal');
-if (closeImageModal) {
-    closeImageModal.addEventListener('click', () => {
-        const imageModal = document.getElementById('imageModal');
-        if (imageModal) {
-            imageModal.classList.add('hidden');
-        }
-    });
-}
-
-const imageModal = document.getElementById('imageModal');
-if (imageModal) {
-    imageModal.addEventListener('click', (e) => {
-        if (e.target === e.currentTarget) {
-            e.currentTarget.classList.add('hidden');
-        }
-    });
-}
-</script>
-</body>
-</html>
+    </body>
+    </html>
